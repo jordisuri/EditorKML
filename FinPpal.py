@@ -368,8 +368,10 @@ class FinPpal(QMainWindow):
                     "Fitxers kml (*.kml);;Tots (*.*)")
 
         self.cami=os.path.dirname(nom_fitxer[0])   # actualitzo el camí, per si hagués canviat
+        print("cami",self.cami)
         if nom_fitxer[0]!='':                   # si no hem tancat el diàleg
             nom=nom_fitxer[0].split('/')[-1]
+            print("nom",nom)
             # recorrem la plantilla del document
             f1=open("PlantillaDoc.kml",'r')
             resultat=''
@@ -382,11 +384,14 @@ class FinPpal(QMainWindow):
                 resultat+=s
                 s=f1.readline()  
             f1.close()
-            
+        print("llegida plantilla")   
         # guardem el text
         f2=open(nom_fitxer[0],'w')
+        print("open")
         f2.write(resultat)
+        print("write")
         f2.close()
+        print("close")
     #-------------------------------------------------------------
     def PosarRutes(self):
         resultat=''
