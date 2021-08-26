@@ -1,0 +1,17 @@
+	<Style id="estil_%r%">
+		<LineStyle>
+			<color>%c%</color>
+			<width>%a%</width>
+		</LineStyle>
+	</Style>
+	<Placemark>
+		<name>%r%</name>
+		<styleUrl>#estil_%r%</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				%p%
+			</coordinates>
+		</LineString>
+	</Placemark>
+ 
